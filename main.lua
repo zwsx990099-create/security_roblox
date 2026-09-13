@@ -39,6 +39,8 @@ Main.Config = {
 
     -- === URLs (multi-fallback) ===
     MODULE_BASES = {
+        -- === URLs (multi-fallback) ===
+    MODULE_BASES = {
         "https://raw.githubusercontent.com/zwsx990099-create/security_roblox/main/",
         "https://cdn.jsdelivr.net/gh/zwsx990099-create/security_roblox@main/",
         "https://raw.githack.com/zwsx990099-create/security_roblox/main/",
