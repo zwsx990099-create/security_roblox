@@ -1,0 +1,284 @@
+# ============================================================
+# EDR Lua — .gitignore
+# ============================================================
+# ครอบคลุม:
+#   1. User-specific state files (สำคัญ!)
+#   2. Logs & reports ที่ generate อัตโนมัติ
+#   3. Editor / IDE files
+#   4. OS-specific junk
+#   5. Build artifacts
+#   6. Roblox executor files
+# ============================================================
+
+# ---------- EDR-specific: ห้าม commit! ----------
+# Trust store: เก็บ SHA-256 hash ของผู้ใช้แต่ละคน (user-specific)
+edr_trust.json
+
+# State persistence: เก็บ session state ปัจจุบัน
+edr_state.json
+
+# Event log
+edr_log.txt
+edr_log_*.txt
+
+# Reports ที่ generate อัตโนมัติ
+edr_report_*.md
+edr_report_*.json
+edr_report_*.html
+edr_report_*.stix
+edr_report_*.csv
+edr_report_*.sarif
+edr_report_*.ioc
+reports/
+report/
+
+# ---------- Roblox executor workspace ----------
+# (executor บางตัวเก็บไฟล์ในโฟลเดอร์เหล่านี้)
+workspace/
+Workspace/
+Files/
+files/
+Scripts/
+scripts/
+AutoExec/
+autoexec/
+
+# Roblox crash logs
+*.rbxlx
+*.rbxl
+crash_log*.txt
+log_*.txt
+
+# ---------- Logs ----------
+*.log
+logs/
+*.log.*
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# ---------- Reports ----------
+output/
+out/
+results/
+
+# ---------- Editor / IDE ----------
+# VS Code
+.vscode/
+!.vscode/settings.json.example
+!.vscode/extensions.json
+*.code-workspace
+
+# JetBrains (IntelliJ IDEA, WebStorm, etc.)
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# Vim / Neovim
+*.swp
+*.swo
+*.swn
+.*.sw?
+tags
+.vim/
+
+# Emacs
+*~
+\#*\#
+.\#*
+.dir-locals.el
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+sublime-project/
+
+# Atom
+.atom/
+
+# ---------- OS-specific ----------
+# macOS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+.AppleDouble
+.LSOverride
+Icon
+.fseventsd
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+Network Trash Folder
+Temporary Items
+.apdisk
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+*.lnk
+*.cab
+*.msi
+*.msm
+*.msp
+*.tmp
+*.temp
+
+# Linux
+*~
+.fuse_hidden*
+.directory
+.Trash-*
+.nfs*
+
+# ---------- Build artifacts ----------
+build/
+dist/
+out/
+target/
+*.o
+*.a
+*.so
+*.dll
+*.dylib
+*.exe
+
+# ---------- Package managers ----------
+# Node.js
+node_modules/
+package-lock.json
+yarn.lock
+.npm/
+.npmrc
+.pnpm-debug.log
+.yarn/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+.pytest_cache/
+.tox/
+.coverage
+.coverage.*
+htmlcov/
+.mypy_cache/
+
+# Lua / LuaRocks
+*.luac
+*.luacov
+*.luacov.report.out
+luarocks/
+.luarocks/
+
+# ---------- Environment ----------
+.env
+.env.*
+!.env.example
+
+# ---------- Sensitive files ----------
+*.key
+*.pem
+*.p12
+*.pfx
+*.jks
+secrets/
+credentials/
+config.local.lua
+
+# ---------- Local overrides ----------
+# ผู้ใช้อาจแก้ config local — ไม่ควร commit
+main.local.lua
+config.local.lua
+*.local.lua
+*.private.lua
+*.personal.lua
+
+# ---------- Backup files ----------
+*.bak
+*.backup
+*.old
+*.orig
+*.save
+*.swp
+*~.nib
+
+# ---------- Cache ----------
+.cache/
+.cached/
+*.cache
+.cache/
+
+# ---------- Misc ----------
+*.pid
+*.seed
+*.pid.lock
+*.tgz
+*.tar.gz
+*.zip
+!*.template.zip
+
+# ---------- Test outputs ----------
+test_results/
+test_output/
+coverage/
+.nyc_output/
+
+# ---------- Temporary files ----------
+tmp/
+temp/
+.tmp/
+*.tmp
+*.temp
+*.swp
+*.swo
+~$*.doc*
+~$*.xls*
+~$*.ppt*
+
+# ============================================================
+# Files ที่ต้อง commit (whitelist)
+# ============================================================
+# ถ้าต้องการ un-ignore ไฟล์ใด ให้ใส่ "!" นำหน้า
+# ตัวอย่าง:
+# !.gitkeep
+# !config.example.lua
+# !edr_trust.example.json
+
+# Ensure these are always tracked:
+!README.md
+!LICENSE
+!CHANGELOG.md
+!CONTRIBUTING.md
+!CODE_OF_CONDUCT.md
+!SECURITY.md
+!*.lua
+!*.md
+!*.yml
+!*.yaml
+!*.json.example
+!.gitignore
+!.gitattributes
