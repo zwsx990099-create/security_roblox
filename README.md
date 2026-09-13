@@ -190,25 +190,14 @@ Lua *.luac, luarocks/
 
 security_roblox/
 ├── .gitignore← ไฟล์นี้
-
 ├── README.md
-
 ├── LICENSE
-
 ├── CHANGELOG.md
-
 ├── main.lua
-
 ├── ui.lua
-
 ├── edr_core.lua
-
 ├── hooks.lua
-
 ├── rules.lua
-
 ├── report.lua
-
 ├── roblox_api.lua
-
 └── vuln_scanner.lua
