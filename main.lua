@@ -39,8 +39,8 @@ Main.BUILD   = "2025-09-14"
 --========== CONFIG ==========--
 Main.Config = {
     -- === URLs ===
-    MODULE_BASE             = "https://raw.githubusercontent.com/YOUR_USERNAME/edr-lua/main/",
-    UI_MODULE_URL           = "https://raw.githubusercontent.com/YOUR_USERNAME/edr-lua/main/ui.lua",
+    MODULE_BASE   = "https://raw.githubusercontent.com/zwsx990099-create/security_roblox/main/",
+    UI_MODULE_URL = "https://raw.githubusercontent.com/zwsx990099-create/security_roblox/main/ui.lua",
     USE_LOCAL               = false,
 
     -- === Bootstrap ===
